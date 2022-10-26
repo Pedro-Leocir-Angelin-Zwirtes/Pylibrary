@@ -17,8 +17,8 @@ navegador = webdriver.Chrome(executable_path=r'./chromedriver.exe', options=crho
 link = 'https://biblioteca.ifrs.edu.br/pergamum_ifrs/biblioteca_s/php/login_usu.php?flag=index.php'
 navegador.get(url=link)
  
-email = '2022002041'
-senha = '231001'
+email = 'seuemail'
+senha = 'suasenha'
  
 sleep(5)
 
@@ -46,6 +46,8 @@ def captu_infos():
 
     titulo = navegador.find_element(By.XPATH, "//*[@id='Accordion1']/div[1]/div[2]/table/tbody/tr[2]/td[2]/a").text
     toast.show_toast("Livro", "{}".format(titulo), duration=90)
+
+
 
 preencher_campos_login(email,senha)
 #click_renovar()
